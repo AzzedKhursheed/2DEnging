@@ -8,7 +8,6 @@
     {
       "name": "default",
       "hidden": true,
-      "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
         "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
@@ -16,6 +15,7 @@
     },
     {
       "name": "windows-debug",
+      "generator": "MinGW Makefiles",
       "inherits": "default",
       "condition": {
         "type": "equals",
@@ -28,6 +28,7 @@
     },
     {
       "name": "linux-release",
+      "generator": "Ninja",
       "inherits": "default",
       "condition": {
         "type": "equals",
@@ -40,6 +41,7 @@
     },
     {
       "name": "macos-debug",
+      "generator": "Ninja",
       "inherits": "default",
       "condition": {
         "type": "equals",
